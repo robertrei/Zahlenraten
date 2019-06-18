@@ -47,6 +47,16 @@ namespace Zahlenraten
 
                     Console.WriteLine("Du hast gewonnen!");
                     Console.WriteLine($"Du hast {x} versuche gebraucht, um die Zahl {a} zu erraten!");
+                    Console.WriteLine(Environment.NewLine);
+                    Console.WriteLine("Möchtest du nochmal spielen? J/N");
+                    if (Console.ReadLine() == "J")
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Gib eine schwierigkeitsstufe ein! 1 (einfach 1-100); 2 (mittel 1- 500); 3 (schwer)");
+
+                        Zahlenraten(GetDifficulty());
+
+                    }
                 }
                 else if (guess < a)
 
